@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BukuController;
+use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
     return redirect('/login');
@@ -31,6 +33,8 @@ Route::middleware('auth')->group(function () {
     // ==========================================
     // MODUL NAUVAL (Buku & Mahasiswa)
     // ==========================================
+    Route::resource('buku', BukuController::class)->except(['create', 'show']);
+    Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
 
     // ==========================================
     // MODUL BAGAS (Pengaduan)
