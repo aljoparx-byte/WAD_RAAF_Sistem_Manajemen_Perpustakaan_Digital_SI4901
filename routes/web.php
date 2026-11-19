@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\KartuController;
 
 Route::get('/', function () {
     return redirect('/login');
@@ -27,6 +29,11 @@ Route::middleware('auth')->group(function () {
     // ==========================================
     // MODUL AYESHA (Anggota & Kartu)
     // ==========================================
+    Route::patch('/anggota/{id}/tipe', [AnggotaController::class, 'updateTipe'])->name('anggota.updateTipe');
+    Route::resource('anggota', AnggotaController::class)->except(['show']);
+    Route::get('/kartu', [KartuController::class, 'index'])->name('kartu.index');
+    Route::post('/kartu/buat', [KartuController::class, 'buat'])->name('kartu.buat');
+    Route::delete('/kartu/hapus', [KartuController::class, 'hapus'])->name('kartu.hapus');
 
     // ==========================================
     // MODUL NAUVAL (Buku & Mahasiswa)
@@ -35,4 +42,4 @@ Route::middleware('auth')->group(function () {
     // ==========================================
     // MODUL BAGAS (Pengaduan)
     // ==========================================
-});
+});git add .
