@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\PenerbitController;
 
 Route::get('/', function () {
     return redirect('/login');
@@ -25,6 +26,12 @@ Route::middleware('auth')->group(function () {
     // ==========================================
     // MODUL ALDO (Penerbit)
     // ==========================================
+    Route::get('/penerbit', [PenerbitController::class, 'index']);
+    Route::get('/penerbit/tambah', [PenerbitController::class, 'create']);
+    Route::post('/penerbit', [PenerbitController::class, 'store']);
+    Route::get('/penerbit/{id}/edit', [PenerbitController::class, 'edit']);
+    Route::put('/penerbit/{id}', [PenerbitController::class, 'update']);
+    Route::delete('/penerbit/{id}', [PenerbitController::class, 'destroy']);
 
     // ==========================================
     // MODUL AYESHA (Anggota & Kartu)
