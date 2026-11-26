@@ -1,0 +1,485 @@
+/* TAMPILAN UTAMA */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+}
+
+header {
+    background-color: #456b98;
+    color: white;
+}
+
+.navbar {
+    width: 86%;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 27px 0 23px;
+}
+
+nav .aktif {
+    border-bottom: 3px solid white;
+}
+
+main {
+    width: 86%;
+    margin: 40px auto;
+}
+
+.judul {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.judul h1 {
+    color: #456b98;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.judul p {
+    color: #666;
+}
+
+.section {
+    margin-top: 35px;
+}
+
+/* FORM */
+
+.form-anggota {
+    width: 520px;
+    max-width: 100%;
+    margin: auto;
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+.form-anggota input,
+.form-anggota textarea,
+.form-anggota select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    height: 90px;
+}
+
+.btn-utama {
+    width: 100%;
+    margin-top: 20px;
+    padding: 11px;
+    background: #456b98;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* TABEL */
+
+.table-box {
+    background: white;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #456b98;
+    color: white;
+}
+
+.btn-kecil {
+    display: inline-block;
+    padding: 8px 11px;
+    background: #456b98;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.form-inline {
+    display: inline-block;
+}
+
+
+.btn-hapus-kecil {
+    background-color: #b94a48;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 8px 11px;
+
+    cursor: pointer;
+}
+
+
+.form-tipe {
+    min-width: 120px;
+}
+
+
+.btn-tipe {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 7px;
+
+    background-color: #456b98;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+.btn-batal {
+    display: block;
+
+    margin-top: 10px;
+    padding: 11px;
+
+    background-color: #777777;
+    color: white;
+
+    text-decoration: none;
+    text-align: center;
+
+    border-radius: 6px;
+}
+
+
+.btn-buat,
+.btn-print {
+    width: 100%;
+
+    margin-top: 10px;
+    padding: 12px;
+
+    background-color: #456b98;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+.kembali {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #456b98;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   PREVIEW ID CARD
+   ========================= */
+
+
+.preview-card {
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+
+.preview-card > h2 {
+    color: #456b98;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* KARTU */
+
+.id-card-print {
+    width: 420px;
+
+    margin: 0 auto;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.12);
+
+    text-align: left;
+}
+
+
+
+/* HEADER KARTU */
+
+.id-card-header {
+    background-color: #456b98;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 18px 20px;
+}
+
+
+.id-card-header h2 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 23px;
+}
+
+
+.id-card-header p {
+    margin: 5px 0 0;
+
+    font-size: 13px;
+
+    color: #eef4fb;
+}
+
+
+
+/* ISI KARTU */
+
+.id-card-body {
+    padding: 20px 25px;
+}
+
+
+.id-data {
+    margin-bottom: 15px;
+}
+
+
+.id-data:last-child {
+    margin-bottom: 0;
+}
+
+
+.id-data span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.id-data strong {
+    display: block;
+
+    color: #222222;
+
+    font-size: 15px;
+}
+
+
+.nama-kartu {
+    font-size: 20px !important;
+}
+
+
+.nomor-id {
+    color: #456b98 !important;
+
+    font-size: 18px !important;
+}
+
+
+
+/* FOOTER KARTU */
+
+.id-card-footer {
+    padding: 10px 20px;
+
+    background-color: #f4f6f9;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+
+
+/* =========================
+   HASIL CETAK ID CARD
+   ========================= */
+
+@media print {
+
+
+    body * {
+        visibility: hidden;
+    }
+
+
+    .id-card-print,
+    .id-card-print * {
+        visibility: visible;
+    }
+
+
+    .id-card-print {
+        position: absolute;
+
+        left: 50%;
+
+        top: 20px;
+
+        transform: translateX(-50%);
+
+        width: 86mm;
+
+        margin: 0;
+
+        box-shadow: none;
+
+        border: 1px solid #cccccc;
+
+        border-radius: 8px;
+    }
+
+
+    .id-card-header {
+        padding: 12px 15px;
+    }
+
+
+    .id-card-header h2 {
+        font-size: 18px;
+    }
+
+
+    .id-card-header p {
+        font-size: 10px;
+    }
+
+
+    .id-card-body {
+        padding: 12px 18px;
+    }
+
+
+    .id-data {
+        margin-bottom: 8px;
+    }
+
+
+    .id-data span {
+        font-size: 9px;
+    }
+
+
+    .id-data strong {
+        font-size: 11px;
+    }
+
+
+    .nama-kartu {
+        font-size: 15px !important;
+    }
+
+
+    .nomor-id {
+        font-size: 13px !important;
+    }
+
+
+    .id-card-footer {
+        padding: 7px 12px;
+
+        font-size: 8px;
+    }
+
+}
+
+.aksi-anggota .btn-kecil {
+    display: block;
+    width: 90px;
+    padding: 9px;
+    margin: 4px auto;
+    text-align: center;
+    font: inherit;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.aksi-anggota form {
+    margin: 0;
+}
+
+.aksi-anggota .btn-hapus-kecil {
+    background-color: #b94a48;
+    color: white;
+}
